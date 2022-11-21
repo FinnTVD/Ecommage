@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
+:root {
+    --colorPrimary: #EE2E24;
+}
+
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+body {
+    color      : black;
+    font-size  : 16px;
+    font-weight: 600;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+    width : 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    margin: 40px 0 10px;
+}
+
+.nav-menu {
+    display: none;
+}
+
+.nav-list {
+    list-style-type: none;
+    display        : flex;
+    justify-content: center;
+}
+
+.nav-link {
+    padding        : 0 30px;
+    display        : block;
+    color          : black;
+    font-size      : 20px;
+    text-decoration: none;
+    line-height    : 36px;
+    text-transform : uppercase;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+.nav-link.active {
+    position: relative;
+    color   : var(--colorPrimary);
+}
+
+.nav-link.active::before {
+    content   : "";
+    position  : absolute;
+    width     : 100%;
+    border-top: 3px solid var(--colorPrimary);
+    left      : -7.5px;
+    bottom    : -11px;
+}
+
+hr {
+    border-top: 1px solid var(--colorPrimary);
+}
+
+.container-slide {
+    position: relative;
+}
+
+.slide {
+    display : flex;
+    overflow: hidden;
+}
+
+.item {
+    height: 340px;
+}
+
+.img-food {
+    object-fit : cover;
+    user-select: none;
+}
+
+.content {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: flex-end;
+}
+
+.name {
+    margin: 20px 0 10px;
+}
+
+.price {
+    color         : var(--colorPrimary);
+    text-transform: uppercase;
+}
+
+.btn {
+    position        : absolute;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    color           : white;
+    background-color: #F99B2A;
+    width           : 40px;
+    height          : 40px;
+    font-size       : 24px;
+    top             : 34%;
+    border          : none;
+    outline         : none;
+    border-radius   : 10px;
+    cursor          : pointer;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-prev {
+    left     : 0;
+    transform: translateX(-50%)
+}
+
+.btn-next {
+    right    : 0;
+    transform: translateX(50%)
+}
+
+
+.show-all {
+    margin          : 40px auto 0;
+    display         : flex;
+    align-items     : center;
+    gap             : 5px;
+    padding         : 10px 30px;
+    color           : var(--colorPrimary);
+    background-color: white;
+    text-transform  : uppercase;
+    font-size       : 14px;
+    cursor          : pointer;
+    border          : 1px solid var(--colorPrimary);
+    border-radius   : 20px;
+}

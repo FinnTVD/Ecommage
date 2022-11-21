@@ -1,0 +1,69 @@
+/* Responsive ipad pro */
+@media (max-width: 991.98px) {
+    body {
+        width: 100%;
+    }
+
+    .container {
+        width: 720px;
+    }
+
+    .btn {
+        top: 44%;
+    }
+
+    .btn-prev {
+        transform: translateX(0);
+    }
+
+    .btn-next {
+        transform: translateX(0);
+    }
+
+}
+
+@media (max-width: 575.98px) {
+    body {
+        width   : 100%;
+        overflow: hidden;
+    }
+
+    .container {
+        padding: 0 16px;
+        width  : 100%;
+    }
+
+    .nav-link {
+        padding: 0;
+    }
+
+    .nav-list {
+        display       : none;
+        flex-direction: column;
+    }
+
+    .nav-menu {
+        display         : block;
+        width           : 46px;
+        height          : 46px;
+        color           : white;
+        background-color: var(--colorPrimary);
+        border          : none;
+        border-radius   : 10px;
+        font-size       : 26px;
+    }
+
+    .nav-menu.active+.nav-list {
+        display   : block;
+        text-align: center;
+    }
+
+    .nav-link.active::before {
+        border: none;
+    }
+
+    .item {
+        width: 100%;
+    }
+
+}
